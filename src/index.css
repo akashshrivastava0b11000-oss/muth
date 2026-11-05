@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#F8FAFC] text-[#0F172A] font-sans antialiased;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Refined minimal scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Smooth Page Transitions */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-enter {
+  animation: fadeInUp 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Flowchart Connector Lines */
+.flowchart-line {
+  background: linear-gradient(90deg, #E2E8F0 0%, #CBD5E1 100%);
+}
+
+.flowchart-line-vertical {
+  background: linear-gradient(180deg, #E2E8F0 0%, #CBD5E1 100%);
+}
